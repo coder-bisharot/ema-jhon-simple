@@ -4,11 +4,10 @@ import fakeData from '../../fakeData';
 import Product from '../Product/Product';
 
 const ProductDetails = () => {
-    const {productKey} = useParams();
-    const product = fakeData.find (pd=>pd.key ===productKey);
+    const { key } = useParams();
+    const product = fakeData.find (pd=>pd.key === key);
     return (
         <div>
-            <h1>{productKey}coming soon........</h1>
             <Product product={product}></Product>
         </div>
     );
